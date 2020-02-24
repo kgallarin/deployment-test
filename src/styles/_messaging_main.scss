@@ -1,0 +1,23 @@
+.messaging-main {
+  display: flex;
+  height: 100%;
+  border-radius: 4px;
+  overflow:hidden;
+
+  .contacts-bar-list {
+    overflow-y: auto;
+    max-height: calc(100% - 88px);
+    margin: 5px 5px 5px 0;
+    // scrollbar on mouse enter
+    @include hiding-scrollbar;
+  }
+
+  @media #{$beyond-md-desktop} {
+    flex-direction: column;
+
+    .contacts-bar {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}

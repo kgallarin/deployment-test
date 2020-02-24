@@ -1,0 +1,69 @@
+.custom-progressbar {
+  border-radius: 5px;
+
+  &.darkgreen {
+    background-color: #02d290;
+  }
+
+  &.tangerine {
+    background-color: $tangerine
+  }
+
+  &.ocean-blue {
+    background-color: $ocean-blue;
+  }
+
+  &.frog-green {
+    background-color: $frog-green;
+  }
+
+  &.warm-pink {
+    background-color: $warm-pink;
+  }
+
+  &.marigold {
+    background-color: $marigold;
+  }
+
+  &.green-blue {
+    background-color: $green-blue;
+  }
+
+  &.bright-orange {
+    background-color: $bright-orange;
+  }
+
+  &.green-chat {
+    background-color: #02d290;
+  }
+
+  &.weird-green {
+    background-color: $weird-green;
+  }
+
+  &.blue-gradient {
+    background: -webkit-linear-gradient(left, #61e2fa, #5e77ff 100%); 
+    background-image: linear-gradient(to left, #61e2fa, #5e77ff);
+  }
+}
+
+.custom-progress {
+  &.large {
+    width: 100%;
+    //max-width: calc(100vw - 500px);
+    //width: 447px !important;
+  }
+
+  &.small {
+    width: 200px !important;
+  }
+
+  &fullwidth {
+    width: 100% !important;
+  }
+
+  &.bordered {
+    border-radius: 8px;
+    border: 2px solid rgba(255,255,255,0.2);
+  }
+}

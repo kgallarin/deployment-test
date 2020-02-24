@@ -1,0 +1,107 @@
+.choose-account-type {
+  .option-contents {
+    display: flex;
+    justify-content: center;
+    padding: 32px 0;
+
+    @media #{$mobile} {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      padding: 32px 8px;
+    }
+  }
+
+  .option {
+    width: 180px;
+    height: 286px;
+    display: flex;
+    padding-bottom: 8px;
+    align-items: flex-end;
+    margin:0 20px;
+    border-radius: 4px;
+    overflow: hidden;
+    &-one {
+      background-image:  url('~@images/auth/option-model.png');
+      background-size: cover;
+
+      @media #{$mobile} {
+        background-position: center center;
+        background-size: cover;
+      }
+    }
+
+    &-two {
+      background-image:  url('~@images/auth/option-studio.png');
+      background-size: cover;
+
+      @media #{$mobile} {
+        background-position: center -50px;
+        background-size: cover;
+      }
+    }
+
+
+    @media #{$tablet-portrait} {
+      width: 280px;
+      height: 286px;
+      max-height: 286px;
+    }
+
+    @media #{$mobile} {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 15px;
+    }
+  }
+
+  // choose studio type
+  &--studio {
+    .option {
+      width: 50%;
+      height: 100%;
+      max-height: 100%;
+      display: flex;
+      padding-bottom: 8px;
+      align-items: flex-end;
+      padding: 16px;
+      margin: 0;
+      border-radius: 0;
+      position: relative;
+      &-contents {
+        padding:0;
+      }
+      &-one {
+        background-image: none;
+        border-right: 1px solid #141423;
+      }
+
+      &-two {
+        background-image: none;
+        background-size: cover;
+
+      }
+
+      img {
+        max-width: 100%;
+        border-radius: 6px;
+      }
+
+      .custom-button {
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        max-width: 80%;
+      }
+
+      @media #{$tablet-portrait} {
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+
+}

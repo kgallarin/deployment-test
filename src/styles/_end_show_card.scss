@@ -1,0 +1,15 @@
+.end-show-card {
+  height: fit-content;
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .content {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 16px;
+    }
+  }
+}

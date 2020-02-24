@@ -1,0 +1,33 @@
+.signboard {
+  display: flex;
+  border-radius: 4px;
+  background-color:#0f1324;
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  &.sm {
+    height: 77px;
+  }
+  
+  &.md {
+    height: 126px;
+  }
+
+  &.cursor {
+    cursor: pointer;
+
+    &:hover,&:focus,&:active {
+      background-color: #030616 !important;
+      transition: 0.3s;
+    }
+  }
+
+  &-inner {
+    text-align: center;
+    
+    p {
+      color: white !important;
+    }
+  }
+  
+}

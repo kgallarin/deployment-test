@@ -1,0 +1,189 @@
+.studio-settings {
+  &-main {
+    font-family: $font-secondary;
+    margin: 24px;
+
+    @media #{$mobile} {
+      margin: 16px;
+    }
+  }
+
+  .main-content {
+    display: flex;
+    padding: 24px 0;
+
+    @media #{$mobile} {
+      flex-direction: column;
+    }
+  }
+
+  .studio-profile {
+    display: flex;
+    flex-direction: column;
+    min-width: 185px;
+    margin-right: 16px;
+  }
+
+  .setting-container {
+    width: 100%;
+
+    @media #{$mobile} {
+      margin-top: 16px;
+    }
+
+    .main {
+      display: flex;
+      @media #{$mobile} {
+        //margin-top: 16px;
+        flex-direction: column;
+      }
+    }
+  }
+
+  .header {
+    font-size: $base;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .sub-header {
+    font-family: $font-secondary;
+    font-size: $font-xxxsm;
+    letter-spacing: normal;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $battleship-grey;
+    margin-bottom: 10px;
+  }
+
+  .form-input {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 0;
+    width: 100%;
+
+    .dropdown {
+      width: 50%;
+
+      @media #{$mobile, $tablet-portrait} {
+        width: 100%;
+      }
+
+      ul {
+        width: 100%;
+      }
+    }
+
+    @media #{$mobile} {
+      padding: 8px 0;
+
+      .dropdown {
+        width: 100%;
+      }
+    }
+
+    .custom-input {
+      border-radius: 4px;
+      background-color: $form-bg;
+      border-color: $form-bg;
+      color: #fff;
+      font-size: $font-xxxsm;
+    }
+    .custom-control-label::before {
+      background: #030616;
+      border-radius: 6px;
+    }
+
+    textarea {
+      background-color: $form-bg;
+      border-color: $dark-three;
+      color: #fff;
+      font-size: $font-xxxsm;
+      padding: 8px 16px;
+      border-radius: 4px;
+      resize: none;
+      @include styled-scroll($white-40, #fff);
+
+      &::placeholder {
+        color: $dark-grey-blue;
+      }
+    }
+
+
+  }
+
+  .form-input:nth-child(1) {
+    margin-right: 16px;
+  }
+
+  .upload-wrapper {
+    background-color: $dark-three;
+    border-radius: 4px;
+
+    @media #{$mobile} {
+      width: 40%;
+    }
+    .file-uploads {
+      position: relative;
+      width: 100%;
+    }
+    .image-button-layout {
+      width: 100%;
+      padding-top: 100%;
+      position: relative;
+
+      .border-dot {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+
+  .custom-checkbox {
+    margin-top: 8px;
+  }
+
+  .button-wrapper {
+    font-family: $font-secondary;
+
+    .btn {
+      width: fit-content;
+      min-width: 177px;
+      margin: auto;
+      font-weight: bold;
+      font-size: $font-xxxsm;
+
+      @media #{$mobile} {
+        width: 100%;
+      }
+    }
+  }
+
+  //for drop down;
+  .custom-large {
+    background: $form-bg;
+    border-radius: 4px;
+    height: auto;
+  }
+
+  .noti-container {
+    display: flex;
+    @media #{$mobile} {
+      flex-direction: column;
+    }
+  }
+
+  .file-upload-form {
+    height: auto;
+    width: 100%;
+    padding: 0;
+    background-color: $dark-three;
+
+    .label {
+      border: none;
+    }
+  }
+}

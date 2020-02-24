@@ -1,0 +1,43 @@
+.status-tag {
+  padding: 2px 4px;
+  font-family: $font-secondary;
+  font-size: $base;
+  display: flex;
+  border-radius: 2px;
+  
+  &.emerald {
+    background: rgba(0, 170, 69, 0.1);
+    color: $emerald;
+    border: 1px solid $emerald;
+  }
+
+  &.green-blue {
+    background: rgba(0, 178, 157, 0.1);
+    color: $green-blue;
+    border: 1px solid $green-blue;
+  }
+
+  &.warm-pink {
+    background: rgba(240, 94, 131, 0.1);
+    color: $warm-pink;
+    border: 1px solid $warm-pink;
+  }
+
+  &.frog-green {
+    background:rgba(123, 201, 14, 0.1);
+    color: $frog-green;
+    border: 1px solid $frog-green;
+  }
+
+  &.bright-orange {
+    background: rgba(255, 89, 0, 0.1);
+    color: $bright-orange;
+    border: 1px solid $bright-orange;
+  }
+
+  &.tangerine {
+    background: rgba(255, 143, 0, 0.1);
+    color: $tangerine;
+    border: 1px solid $tangerine;
+  }
+}

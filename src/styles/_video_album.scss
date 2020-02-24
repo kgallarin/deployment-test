@@ -1,0 +1,142 @@
+.vdo-main-container {
+  display: flex;
+  justify-content: start;
+  margin: 0 16px 24px 16px;
+  //padding: 8px;
+  flex-direction: column;
+
+  .caption-container {
+    padding: 16px 0px;
+  }
+
+  textarea {
+    resize: none;
+    background-color: #323646;
+    border-color: #323646;
+    color: $white;
+    padding: 0px 0px 4px 0px;
+    padding-bottom: 16px;
+    border-radius: 8px;
+    font-family: $font-secondary;
+    height: fit-content;
+    overflow: hidden;
+  }
+
+  textarea.form-control {
+    resize: none;
+    background-color: #323646;
+    border-color: #323646;
+    color: $white;
+    padding-bottom: 16px;
+    border-radius: 4px;
+    margin: 0px -1px;
+    margin-right: 8px;
+    height: fit-content;
+    overflow: hidden;
+  }
+
+  @media screen and (min-width: 1280px) {
+    flex-direction: row;
+
+    .vdo-container-wrapper {
+      width: 75%;
+      flex: 0 0 75%;
+    }
+
+    .caption-container {
+      width: 25%;
+      flex: 0 0 25%;
+      padding: 0px 0px 16px 24px;
+      height: fit-content;
+
+      textarea {
+        resize: none;
+        background-color: #323646;
+        border-color: #323646;
+        color: $white;
+        padding: 0px 0px 4px 0px;
+        padding-bottom: 16px;
+        border-radius: 8px;
+        font-family: $font-secondary;
+        height: fit-content;
+        overflow: hidden;
+      }
+    
+      textarea.form-control {
+        resize: none;
+        background-color: #323646;
+        border-color: #323646;
+        color: $white;
+        padding-bottom: 16px;
+        border-radius: 4px;
+        margin: 0px -1px;
+        margin-right: 8px;
+        height: fit-content;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+.vdo-container {
+  width: 100%;
+
+  &-mask {
+    z-index: 9;
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, #000);
+    border-radius: 4px;
+    width: 100%;
+    margin-top: -39px;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0 4px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      cursor: pointer;
+    }
+  }
+
+  iframe {
+    border-radius: 4px;
+  }
+  textarea {
+    resize: none;
+    background-color: #323646;
+    border-color: #323646;
+    color: $white;
+    padding: 4px 0px;
+    border-radius: 8px;
+    font-family: $font-secondary;
+  }
+
+  textarea.form-control {
+    resize: none;
+    background-color: #323646;
+    border-color: #323646;
+    color: $white;
+    padding-bottom: 16px;
+    border-radius: 4px;
+    margin: 19px -1px;
+    margin-right: 8px;
+  }
+
+  .dropdown {
+    //align-self: end;
+    margin-top: 16px;
+  }
+
+  &-dropdown {
+    .dropdown-menu {
+      &.show {
+        margin-top: -16px !important;
+      }
+    }
+  }
+
+  &-wrapper {
+    width: 100%;
+  }
+}

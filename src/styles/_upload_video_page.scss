@@ -1,0 +1,55 @@
+.upload-vdo {
+  .main-container {
+    padding: 24px 32px;
+    display: flex;
+    flex-direction: column;
+
+    @media #{$mobile} {
+      padding: 24px; 
+    }
+  }
+
+  .wrapper {
+    align-self: flex-end;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .title {
+    text-transform: uppercase;
+    font-size: $base;
+    font-family: $font-secondary;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+  }
+
+  .upload-button-container {
+    margin: 16px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    button {
+      width: fit-content;
+      width: -moz-fit-content; //firefox
+      min-width: 140px;
+      align-self: flex-end;
+      font-family: $font-secondary;
+      font-size: $base;
+      font-weight: bold;
+      color: $white;
+
+      @media #{$mobile} {
+        width: 100%;
+      }
+    }
+  }
+}

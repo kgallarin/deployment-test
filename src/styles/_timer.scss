@@ -1,0 +1,15 @@
+.timer {
+  .timer-inner {
+    background: #030616;
+    min-height: 77px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 4px;
+  }
+
+  .number {
+    font-weight: 700;
+  }
+}

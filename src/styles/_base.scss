@@ -1,0 +1,230 @@
+html,body,section {
+  height: 100%;
+  width: 100%;
+  background: $black;
+}
+
+body {
+    min-width: 414px;
+    background: #fff;
+    font-family: $font-primary;
+    font-size: $base;
+    font-weight: 400;
+    color: #fff;
+}
+
+strong {
+  font-weight: 700;
+}
+
+// layout base
+
+.landing-layout {
+  background: #000;
+}
+
+
+// light and dark mode
+
+.body-light{ background-color: #e9ebee; }
+.body-dark{ background-color: $dark; }
+
+.dark-mode {
+  background-color: $dark-two !important;
+}
+
+.light-mode {
+  background-color: #fff !important;
+}
+
+// offset header
+
+.offset-header-wrapper {
+  padding-top: 54px;
+  background: $black;
+
+  &.dashboard-wrapper {
+    padding-top: 70px;
+  }
+}
+
+h1[class],
+h2[class],
+h3[class],
+h4[class],
+h5[class],
+h6[class],
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child,
+p:last-child,
+ul:last-child,
+ol:last-child,
+dl:last-child,
+table:last-child,
+blockquote:last-child {
+    margin-bottom: 0;
+    @include font-settings;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+table,
+a,
+blockquote {
+  @include font-settings;
+  list-style: none;
+  padding: 0;
+  text-decoration: none !important;
+}
+
+.svg-template-file {
+  height: 0;
+  display: none;
+}
+
+// utilities
+
+.oflow-hidden {
+  overflow: hidden;
+}
+
+.opacity {
+  &-0 {
+    opacity: 0 !important;
+  }
+  &-1 {
+    opacity: 1 !important;
+  }
+}
+
+.text- {
+  &-uppercase {
+    text-transform: uppercase;
+  }
+
+  &-lowercase {
+    text-transform: lowercase;
+  }
+}
+
+svg {
+  outline: none;
+}
+
+.cursor {
+  &-pointer {
+    cursor: pointer;
+  }
+  &-none {
+    cursor: default;
+  }
+}
+
+// custom normal checkbox
+.models-chk {
+  .custom-control-label {
+    cursor: pointer;
+    font-size: $font-xxsm;
+  }
+  .custom-control-label::before {
+    border: 3px solid #fff !important;
+    border-radius: 2px !important;
+    background: #000;
+  }
+  .custom-control-label::before,
+  .custom-control-label::after {
+     border-radius: 0.25rem;
+     top: 1px;
+     border-radius: 0.25rem;
+     height: 18px;
+     width: 18px;
+   }
+   .custom-control-input:checked ~
+   .custom-control-label::after{
+      top: 1px;
+      background-image: url('~@svg/chck-xsm.svg');
+      background-position: center center;
+    }
+  .custom-control-input:checked ~
+  .custom-control-label::before {
+      color: #fff;
+      border-color: #fff;
+      background-color: #fff;
+      height: 18px;
+      width: 18px;
+      background-color: $dark-grey-blue;
+  }
+  .custom-control-input:not(:disabled):active ~
+  .custom-control-label::before {
+    //background-color: #cbe018;
+  }
+  // pink checkbox
+  &.pink-cb {
+    .custom-control-input:checked ~
+    .custom-control-label::after{
+       top: -1px;
+     }
+     .custom-control-input:checked ~
+     .custom-control-label::before {
+         background-color: $warm-pink !important;
+     }
+     .custom-control-label::before {
+       border: 0 !important;
+       border-radius: 6px !important;
+       background-repeat: no-repeat;
+       background-position: center center;
+     }
+    .custom-control-label::before,
+    .custom-control-label::after {
+      top: -1px;
+      height: 24px !important;
+      width: 24px !important;
+    }
+    .custom-control-label {
+      padding-left: 12px;
+    }
+  }
+}
+.cb-group{
+  &:focus {
+    outline: none !important;
+  }
+}
+
+
+// for icon rotations
+
+.rotate {
+  &-180 {
+    transform: rotate(180deg);
+  }
+}
+
+
+// simple transitions used in messaging
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.2s
+}
+
+.fade-enter, .fade-leave-active {
+  opacity: 0
+}

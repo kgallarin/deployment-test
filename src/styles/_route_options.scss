@@ -1,0 +1,6 @@
+.route-options {
+  display: flex;
+  .link-square-icon {
+    @include link-squared;
+  }
+}

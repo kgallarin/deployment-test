@@ -1,0 +1,94 @@
+.file-upload-form {
+  font-family: $font-secondary;
+  height: 250px;
+  width: 250px;
+  padding: 10px;
+  display: flex;
+  text-align: center;
+  position: relative;
+
+  margin-right: 23px;
+
+  background-color: #030616;
+  border-radius: 4px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  label { margin-bottom: 0; }
+  .label {
+    border: 2px dashed rgba(255, 255, 255, 0.6);
+    width: 100%;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+
+  .file-upload {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    &s{
+      position: static !important;
+    width: 100%;
+    }
+  }
+
+  // input[type="file"] {
+  //   display: none;
+  // }
+
+  .header-ttl {
+    font-size: $font-xmd;
+    letter-spacing: -0.58px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    justify-content: center;
+
+    svg { fill: #fff; margin-left: 4px; margin-top: -2px;}
+  }
+  .sub-ttl {
+    letter-spacing: -0.38px;
+  }
+
+  .btm-text {
+      letter-spacing: -0.34px;
+      font-size: $font-xxsm;
+      min-height: 15px;
+  }
+
+  .image-preview {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 4px;
+    background: #fff;
+    padding: 10px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      max-width: 132px;
+      max-height: 175px;
+      margin: 0 auto;
+    }
+
+    .remove-image {
+      font-family: $font-primary;
+      letter-spacing: -0.38px;
+      margin-top: 12px;
+      position: relative;
+      z-index: 123;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+.cm-sidebar {
+  position: fixed;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  width: 100%;
+  z-index: 87;
+  padding-top: 70px;
+
+  font-family: $font-secondary;
+
+  &--inner {
+    width: 300px;
+    background: $dark-two;
+    height: 100%;
+    overflow-y: auto;
+
+    // slide animation
+    animation-duration: .3s;
+    animation-delay: .1s;
+    animation-name: slideInLeft;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+
+    li {
+      text-align: center;
+      margin-bottom: 40px;
+
+      a {
+        color: #fff;
+        letter-spacing: normal;
+        font-weight: normal;
+
+        &.router-link-exact-active {
+          color: $warm-pink;
+          font-weight: 700;
+        }
+
+        &:hover {
+          color: $warm-pink;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+// @keyframes
+
+@-webkit-keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}

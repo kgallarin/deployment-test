@@ -1,0 +1,49 @@
+.custom-button {
+  &.btn-light {
+    display: block;
+    text-decoration: none;
+    background: blue;
+    width: 100%;
+    background-image: linear-gradient(103deg, #ff8d5c, #fe2493);
+    height: 40px;
+    color: #fff;
+    border: 0;
+    line-height: unset;
+
+    @include font-settings;
+    letter-spacing: -0.38px;
+
+    &:hover,&:focus,&:active {
+      color: darken(#fff, 10%) !important;
+      text-decoration: none;
+    }
+
+    .rounded-pill {
+      border-radius: 20px;
+    }
+  }
+
+  &.link-square-icon {
+    min-width: 43px;
+    min-height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: $black-30;
+    margin: 0;
+    border: 1px solid $white-10;
+
+    .svg-icon {
+      fill: #fff;
+    }
+
+    &:hover {
+      background: $dark-grey-blue;
+    }
+  }
+
+  &:disabled {
+    color: #25283a;
+  }
+}

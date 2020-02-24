@@ -1,0 +1,264 @@
+.help-info {
+  display: flex;
+  flex-direction: row;
+
+  @media #{$mobile}, #{$tablet-portrait} {
+    flex-direction: column;
+  }
+
+  .wrapper {
+    margin-bottom: 16px;
+    overflow: hidden;
+
+    @media #{$tablet-portrait} {
+      margin-bottom: 16px;
+    }
+
+    @media #{$mobile} {
+      margin-bottom: 8px;
+    }
+  }
+
+  .svg-wrapper {
+    position: relative;
+  }
+
+  .bg-icon {
+    position: absolute;
+    top: -5px;
+    right: 0;
+  }
+
+  .top-0 {
+    top: -1px;
+  }
+
+  .section-1 {
+    width: 30%;
+    @media #{$mobile}, #{$tablet-portrait} {
+      width: 100%;
+      order: 23;
+    }
+  }
+
+  .section-2 {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+
+    @media #{$mobile}, #{$tablet-portrait} {
+      width: 100%;
+      margin: 0px;
+      order: -1;
+    }
+  }
+
+  .search-wrapper {
+    display: flex;
+    align-self: center;
+    width: 100%;
+
+    @media #{$mobile} {
+      margin-left: 0px;
+    }
+
+    input[type="text"] {
+      color: #000;
+      &:focus,
+      &:active {
+        border-radius: 4px 4px 0px 0px;
+      }
+    }
+  }
+
+  .search-container {
+    padding: 24px 32px;
+    display: flex;
+    margin-bottom: 16px;
+
+    @media #{$mobile} {
+      flex-direction: column;
+      padding: 24px;
+    }
+
+    .search-icon-container {
+      margin-left: -32px;
+      align-self: center;
+    }
+
+    .search-container-input {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .header {
+      padding-top: 4px;
+      margin-bottom: 0;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: fit-content;
+      width: -moz-fit-content; //firefox
+      text-transform: uppercase;
+      font-family: $font-secondary;
+      font-size: 20px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      letter-spacing: -0.48px;
+      color: #ffffff;
+      align-self: center;
+
+      @media #{$mobile} {
+        width: 100%;
+      }
+    }
+  }
+
+  .autocomplete-container {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    padding-bottom: 14px;
+    
+    @media #{$mobile} {
+      margin: 16px 0px 24px 0px;
+    }
+  }
+
+  .autocomplete-wrapper {
+    padding-left: 16px;
+    width: 100%;
+    position: absolute;
+    align-self: flex-start;
+
+    @media #{$mobile} {
+      padding-left: 0px;
+    }
+  }
+}
+
+.help-info-main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 24px 24px 24px 32px;
+
+  .header {
+    text-transform: uppercase;
+    font-family: $font-secondary;
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.68px;
+    color: #ffffff;
+  }
+}
+
+.help-list-item {
+  font-family: $font-secondary;
+  font-size: $base;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: -0.54px;
+  color: $white;
+  width: fit-content;
+  width: -moz-fit-content; //firefox
+
+  .icon {
+    align-self: center;
+    margin-right: 8px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    cursor: pointer;
+    font-weight: bold;
+  }
+}
+
+.help-info-answer-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 24px 32px;
+
+  .header {
+    font-family: $font-secondary;
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.68px;
+    color: #ffffff;
+  }
+}
+.help-info-answer {
+  display: flex;
+  flex-direction: column;
+
+  .answer-container {
+    padding: 24px 32px;
+
+    p {
+      font-family: $font-primary;
+      font-weight: 300;
+      margin: 0;
+      padding: 0;
+      white-space: pre-line;
+      margin-top: -20px;
+    }
+  }
+}
+
+.help-info-autocomplete {
+  width: 100%;
+  position: relative;
+
+  @media #{mobile} {
+
+  }
+
+  .option {
+    ul {
+      background-color: #fff;
+      border-radius: 0px 0px 4px 4px;
+    }
+
+    li {
+      padding: 8px 16px;
+      color: #030616;
+      font-family: $font-secondary;
+      font-size: $base;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #a2a2a21f;
+      }
+    }
+
+    .active-item {
+      background-color: #a2a2a21f;
+    }
+  }
+
+  .search-highlight {
+    color: $warm-pink;
+    font-size: $base;
+  }
+
+  .nonhighlight {
+    color: #000;
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+}

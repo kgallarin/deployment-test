@@ -1,0 +1,28 @@
+.search-form {
+  background: $form-bg;
+  border-radius: 4px;
+  padding: 0 10px;
+  width: 100%;
+  max-width: 345px;
+  min-width: 345px;
+  margin-right: 16px;
+
+  .custom-input {
+    background: transparent;
+    border: transparent;
+    outline: none;
+    font-size: $font-xsm;
+
+    &.form-control {
+      &:focus, &:active {
+        box-shadow: none;
+      }
+    }
+  }
+
+  // .search-form
+  @media #{$tablet-portrait} {
+    margin-bottom: 16px;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,31 @@
+.status-bar {
+  padding: 25px 32px 18px 55px;
+  border-bottom: 1px solid #d7d7d7;
+  color: #343c4b;
+  font-family: $font-secondary;
+  max-height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  // user status
+  .username {
+    &:after {
+      display:none;
+    }
+
+    &.active {
+      &:after {
+        background: #5cd068;
+        border: 2px solid #a1e4a8;
+        display:block;
+        position: absolute;
+        left: -28px;
+      }
+    }
+  }
+
+  .status {
+
+  }
+}

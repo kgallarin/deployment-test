@@ -1,0 +1,33 @@
+.messaging-notes {
+  max-width: 270px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+
+  .editable-note-container {
+    max-height: 65%;
+  }
+  .editable-note {
+    max-height: calc(100% - 10px);
+    overflow-y: auto;
+    @include hiding-scrollbar-dark;
+
+    padding-right: 5px;
+  }
+  textarea {
+    padding: 0;
+    border: 0;
+    padding-top: 10px;
+    resize: none;
+  }
+
+  .main-note-container {
+    padding-right: 5px;
+  }
+
+  // .messaging-notes
+  @media #{$beyond-md-desktop} {
+    max-width: 100%;
+    height: 100%;
+  }
+}

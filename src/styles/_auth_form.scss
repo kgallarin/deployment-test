@@ -1,0 +1,138 @@
+// auth --wrapper
+.auth-wrapper{
+  width: 100%;
+  max-width: 860px;
+  background: #1b2031;
+  height: 484px;
+  border-radius: 4px;
+  overflow: hidden;
+
+  @media #{$tablet-portrait} {
+    height: auto;
+  }
+}
+
+// login form styles
+
+.auth-form {
+  min-height: 484px;
+  position: relative;
+  &--header {
+    padding: 12px 20px;
+    border-bottom: 1px solid $dark;
+
+    .close { opacity: 1; }
+    svg {
+      fill: #fff;
+    }
+  }
+  &--navigation {
+    margin-bottom: 11px;
+    h3 {
+      letter-spacing: -0.41px;
+      font-weight: 500;
+      font-size: $font-sm;
+      margin-bottom: 0;
+    }
+  }
+
+  &--subs {
+    p {
+      font-size: $font-xxsm;
+      font-weight: 500;
+    }
+  }
+
+  &--form {
+    .input-wrapper {
+      padding-bottom: 8px;
+      position: relative;
+    }
+
+    .link {
+      color: $white;
+      font-size: $font-xxsm;
+      margin-top: 12px;
+    }
+  }
+
+  &--footer {
+    min-height: 56px;
+    bottom: 0;
+    border-top: 1px solid #141423;
+    width: 100%;
+  }
+
+  .content-spacing {
+    padding: 17px 20px;
+  }
+
+  .keep-chk {
+    margin-top: 12px;
+  }
+
+  .validation-err {
+    font-family: $font-primary;
+    font-size: $font-xxsm;
+    @include font-settings;
+    letter-spacing: -0.48px;
+    color: $warm-pink;
+
+    text-transform: capitalize;
+
+    position: absolute;
+    right: 14px;
+    top: 12px;
+  }
+
+  &--register-success {
+    padding: 50px;
+
+    .svg-icon {
+      margin: 0 auto;
+      display: block;
+      margin-bottom: 32px;
+    }
+    header,
+    .subs {
+      font-family: $font-primary;
+      font-size: $font-xmd;
+      @include font-settings;
+      text-align: center;
+      color: #ffffff;
+      margin-bottom: 32px;
+    }
+    header {
+      font-weight: 500;
+      letter-spacing: -0.82px;
+    }
+
+    .subs {
+      line-height: 1.43;
+      font-size: $font-xxsm;
+      letter-spacing: -0.48px;
+    }
+  }
+
+  .success-flag {
+    border-radius: 8px;
+    border: solid 1px rgba(255,255,255,0.1);
+    background-color: #030616;
+    height: 107px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 12px;
+    header {
+      font-family: $font-primary;
+      font-size: $font-sm;
+      font-weight: 700;
+      @include font-settings;
+      letter-spacing: -0.41px;
+      text-align: center;
+      color: $frog-green;
+      margin-bottom: 16px;
+    }
+  }
+}

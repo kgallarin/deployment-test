@@ -1,0 +1,94 @@
+.tile {
+  border-radius: 8px;
+  border: solid 1px $white-10;
+  background-color: $dark-two;
+  display: flex;
+  width: 100%;
+
+  &.sm {
+    padding: 8px;
+
+    @media #{$mobile} {
+      padding: 24px !important;
+    }
+  }
+
+  &.md {
+    padding: 16px;
+  }
+
+  &.lg {
+    padding: 24px;
+  }
+
+  &.default {
+    padding: 0;
+  }
+
+  &.dark {
+    background-color: #030616;
+  }
+
+  .tile-header {
+    font-family: $font-secondary;
+    padding-top: 8px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+
+    .header {
+      font-size: $font-xmd;
+    }
+    .header-small {
+      font-size: $base;
+    }
+  }
+
+  .tile-body {
+    font-size: $font-xxsm;
+  }
+}
+
+.display-flex{
+  display: flex;
+  min-height: 72px;
+  width: 100%;
+
+  .tile-icon {
+    width: 72px;
+    height: 100%;
+    border-radius: 8px 0 0 8px;
+    background-color: $marigold;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    min-width: 72px;
+  }
+}
+
+.tile-with-icon{
+  border-radius: 8px;
+  background-color: $dark-two;
+  display: flex;
+  position: relative;
+  width: 100%;
+
+  .tile-title {
+    font-size: $font-xmd;
+  }
+
+  .tile-message {
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left !important;
+    padding: 16px 20px 16px 20px;
+  }
+}
+
+.warning {
+  color: "yellow";
+}

@@ -1,0 +1,59 @@
+.cam2cam {
+  $font-family: $font-secondary;
+
+  .section1 {
+    display: flex;
+
+    .liveshow-setting {
+      &.info {
+        $font-family: $font-secondary;
+      }
+    }
+  }
+
+  .section2 {
+    min-height: unset;
+    margin-bottom: 16px;
+    height: fit-content;
+  }
+
+  .section3 {
+    padding: 0;
+    position: relative;
+    height: calc(100% - 442px);
+    min-height: 377px;
+
+    .container-left {
+      display: flex;
+      flex-direction: row;
+
+      @media #{$small-desktop} {
+        flex-direction: column;
+      }
+    }
+
+    .note {
+      text-align: left;
+    }
+  }
+
+  .member-info-container {
+    word-break: break-all;
+    max-height: 306px;
+    flex: 1 0;
+    text-align: left;
+
+  }
+
+  .stat-container {
+    flex: 2 0;
+  }
+
+  .microphone {
+    justify-content: center;
+  }
+
+  .font-setting {
+    align-self: center;
+  }
+}

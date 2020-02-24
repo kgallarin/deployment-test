@@ -1,0 +1,165 @@
+.video-uploader {
+  .main {
+    background-color: #323746;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .wrapper {
+    align-self: flex-end;
+    position: absolute;
+    z-index: 1;
+  }
+  .container-button {
+    width: 30px;
+    height: 30px;
+    background-color: $warm-pink;
+    border-radius: 0px 4px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: flex-end;
+    z-index: 1;
+  }
+
+  .vdo-wrapper {
+    border-radius: 4px 4px 0px 0px;
+    justify-content: center;
+    align-items: center;
+
+    .button-container {
+      padding-top: 56.25%;
+      position: relative;
+      width: 100%;
+      background-color: #0d0f18;
+      border-radius: 4px;
+
+      @media #{$mobile} {
+        padding-top: 56.25%;
+      }
+    }
+
+    .progressbar-container {
+      padding-top: 56.25%;
+      position: relative;
+      width: 100%;
+      background-color: #323646;
+      border-radius: 4px;
+      justify-content: center;
+
+      .wrapper {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        margin-right: auto;
+        margin-left: auto;
+        width: 100%;
+        flex: 0 0 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      @media #{$mobile} {
+        padding-top: 56.25%;
+      }
+    }
+  }
+
+  .vdoname {
+    border-radius: 4px;
+    background-color: #fff;
+    margin-left: 8px;
+    margin-bottom: 16px;
+
+    @media #{$small-desktop} {
+      padding-top: 0;
+      margin: 16px 0;
+
+      input {
+        font-family: $font-secondary;
+        font-size: $base;
+        padding: 0 16px;
+      }
+  
+      ::placeholder {
+        color: #81828a;
+      }
+    }
+    
+
+    input {
+      background-color: #fff;
+      font-family: $font-secondary;
+      font-size: $base;
+      padding: 0 16px;
+      color: #030616;
+    }
+
+    ::placeholder {
+      color: #81828a;
+    }
+  }
+
+  .caption {
+    border-radius: 4px;
+    background-color: #fff;
+
+    margin-left: 8px;
+    
+
+    @media #{$small-desktop} {
+      padding: 0;
+      margin: 8px 0;
+    }
+
+    ::placeholder {
+      color: #81828a;
+    }
+
+    textarea {
+      background-color: #fff;
+      width: 100%;
+      height: 100%;
+      color: #030616;
+      border: none;
+      //padding: 12.3px 4px 12.3px 18px;
+      padding: 8px 16px;
+      font-family: $font-secondary;
+      outline: none;
+      resize: none;
+      
+      ::placeholder {
+        color: #81828a;
+      }
+    }
+
+    textarea.form-control {
+      background-color: #fff;
+      outline: none;
+      resize: none;
+
+      ::placeholder {
+        color: #81828a;
+      }
+    }
+  }
+
+  .upload-button {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    border-radius: 4px 4px 0px 0px !important;
+    font-size: $font-xxsm;
+    color: $battleship-grey;
+  }
+
+  .custom-container {
+    margin: 0px;
+  }
+}

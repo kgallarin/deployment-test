@@ -1,0 +1,172 @@
+.groupchat {
+
+  .member-info-container {
+    max-height: 306px;
+    word-break: break-all;
+
+    .content-container {
+      @include styled-scroll($white-40, #fff);
+      overflow-y: auto;
+      padding: 0 16px;
+    }
+
+    .content-container:last-child {
+      padding-bottom: 16px;
+    }
+
+    .header {
+      justify-content: flex-start;
+    }
+
+    .center {
+      justify-content: center;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0;
+      margin-top: 0;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      .editable-note {
+        width: 100%;
+        padding: 0;
+      }
+
+      textarea {
+        width: 100%;
+        @include styled-scroll($white-40, #fff);
+      }
+    }
+  }
+
+  svg[id="prev-user"],
+  svg[id="next-user"] {
+    &:hover {
+      cursor: pointer;
+      background-color: rgba(3, 6, 22, 0.1);
+      font-weight: bold;
+    }
+  }
+}
+
+.groupchat-controller {
+  display: flex;
+  font-family: $font-secondary;
+  font-size: $base;
+  margin: 16px;
+  max-height: 124px;
+  width: 100%;
+
+  .dark-font {
+    color: $dark-grey-blue;
+  }
+
+  .section1 {
+    flex: 3 0;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+    margin-right: 16px;
+    
+    .wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 0px;
+  
+      label {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: $base;
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  .section2 {
+    flex: 1 0;
+
+    .groupchat-button {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .dark-groupchat-button-disabled {
+      cursor: not-allowed;
+      background-color: #161928;
+      color: #25283a;
+      background-image: none;
+
+      &:hover,
+      &:focus,
+      &:active {
+        cursor: not-allowed;
+        background-color: #161928 !important;
+        color: #25283a !important;
+        background-image: none;
+      }
+    }
+
+    .light-groupchat-button-disabled {
+      cursor: not-allowed;
+      background-color: $very-light-blue;
+      color: #25283a;
+      background-image: none;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: #25283a !important;
+      }
+    }
+  }
+
+  .user-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+    overflow-y: auto;
+    max-height: 100px;
+    @include styled-scroll($white-40, #fff);
+  }
+
+  .user-item {
+    display: flex;
+    flex-grow: 1;
+    flex: 1 1 50%;
+    padding: 8px 0;
+
+    p {
+      font-family: $font-secondary;
+      font-size: $font-xxsm;
+      font-weight: normal;
+    }
+  }
+}
+
+.chatbox-control {
+  max-height: 306px !important;
+  display: flex;
+  flex-direction: column;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+
+  .content {
+    &:hover {
+      font-weight: bold;
+    }
+  }
+}

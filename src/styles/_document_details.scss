@@ -1,0 +1,13 @@
+.upload-section {
+  &-inner {
+    margin: 0 auto;
+  }
+
+  .uploader-head,
+  .foot-text {
+    padding: 48px 0 !important;
+    margin:0;
+    font-weight: 700;
+    font-family: $font-secondary;
+  }
+}

@@ -1,0 +1,27 @@
+.liveshow-setting {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 28px 16px;
+  width: 100%;
+  border-radius: 8px;
+  font-family: $font-secondary;
+  .info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .control {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    p {
+      margin: 0;
+      padding-right: 8px;
+      align-self: center;
+      font-weight: bold;
+      font-family: $font-secondary;
+    }
+  }
+}

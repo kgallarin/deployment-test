@@ -1,0 +1,76 @@
+.editable-note-container {
+  padding: 16px 20px;
+  .label {
+    font-family: $font-secondary;
+    font-size: 16px;
+    font-weight: 700;
+    @include font-settings;
+    color: #343c4b;
+    background: #fff;
+    position: relative;
+  }
+  .editable-note {
+      .note-container,
+      textarea {
+          cursor: text;
+          font-family: $font-secondary;
+          font-size: 14px;
+          @include font-settings;
+          line-height: 1.43;
+          color: #343c4b;
+          white-space: pre-line;
+          margin-top: -10px;
+          outline: none;
+
+          &:focus, &:hover,&:active {
+            box-shadow: none;
+            outline: none;
+            border: 0;
+          }
+      }
+
+      textarea {
+          margin-top: 0;
+          overflow: hidden;
+          outline: 0;
+      }
+
+      .note-container {
+        word-break: break-all;
+      }
+  }
+
+  &.dark {
+    textarea {
+      background-color: $dark-three;
+      color: #fff;
+    }
+
+    p.label {
+      font-weight: bold;
+      font-size: $base;
+      background-color: $dark-two;
+      color: #fff;
+    }
+
+    .note-container{
+      color: #fff;
+    }
+  }
+
+  &.light {
+    textarea {
+      background-color: $very-light-blue;
+    }
+
+    p.label {
+      font-weight: bold;
+      font-size: $base;
+      background-color: #fff;
+    }
+
+    .note-container{
+      color: $dark-grey-blue;
+    }
+  } 
+}

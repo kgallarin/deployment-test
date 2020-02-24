@@ -1,0 +1,19 @@
+.contacts-bar {
+  width: 100%;
+  max-width: 405px;
+
+  background-color: $dark-two;
+
+  .header {
+    padding: 17px 30px;
+    border-bottom: 1px solid $white-10;
+    .search-form {
+      max-width: 100%;
+      margin: 0;
+
+      .custom-input {
+        @include styled-placeholder(#8190b0, 16)
+      }
+    }
+  }
+}

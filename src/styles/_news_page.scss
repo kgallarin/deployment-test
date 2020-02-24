@@ -1,0 +1,133 @@
+.news-container {
+  font-family: $font-secondary;
+  font-size: $base;
+  letter-spacing: -0.54px;
+
+  &-navigation {
+    width: 100%;
+  }
+
+  &-main {
+    margin-top: 16px;
+    max-height: calc(100vh - 243px);
+    overflow: auto;
+    @include styled-scroll($white-40, #fff);
+  }
+
+  .button-container {
+    width: 170px;
+    padding: 8px 0px;
+    margin: 0px 8px;
+    cursor: pointer;
+
+    @media #{$mobile} {
+      max-width: 43px;
+    }
+  }
+  
+  p.title {
+    font-weight: bold;
+    color: $battleship-grey;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    
+    &:hover {
+      font-weight: bold;
+      opacity: 1;
+
+      svg[name='share']{
+        fill: $white;
+        opacity: 1;
+      }
+    }
+  }
+
+  svg[name='share']{
+    fill: $white;
+    opacity: 0.5;
+  }
+
+  .main-content {
+    display : flex;
+    width: 100%;
+    
+    @media #{$mobile} {
+      flex-direction: column;
+    }
+  }
+
+  .news {
+    &-card {
+      max-height: 180px;
+      
+      @media #{$mobile} {
+        max-height: initial !important;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &-image {
+      border-radius: 8px 0px 0px 8px;
+      border: solid 1px $white-10;
+      border-width: 0px 1px 0px 0px;
+      width: 360px;
+      max-height: 180px;
+      height: 100%;
+
+      @media #{$small-desktop} {
+        width: 230px !important;
+      }
+
+      @media #{$tablet-portrait} {
+        width: 230px !important;
+      }
+
+      @media #{$mobile} {
+        border-radius: 8px 0px 0px 0px;
+        width: 100% !important;
+        height: 199px !important;
+      }
+    }
+
+    &-info {
+      margin: 16px 16px 0px 16px;
+      width: 100%;
+
+      @media #{$mobile} {
+        width: initial;
+      }
+
+    }
+    &-header {
+      font-weight: bold;
+    }
+
+    &-detail {
+      line-height: 1.38;
+      margin: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3; /* number of lines to show */
+
+      @media #{$mobile} {
+        -webkit-line-clamp: 8;
+      }
+    }
+
+    &-footer {
+      display: flex;
+      opacity: 0.5;
+      padding-top: 16px;
+    }
+  }
+}
+

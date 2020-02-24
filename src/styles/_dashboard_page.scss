@@ -1,0 +1,36 @@
+.dashboard-wrapper {
+  height: 100%;
+  overflow: auto;
+  background: $dark;
+  @include styled-scroll($white-40, #fff);
+}
+
+.dashboard-container {
+  padding: 24px;
+  min-width: 320px;
+  justify-content: space-between;
+  margin-top: 70px;
+  flex-grow: 1;
+  // height: calc(100vh - 100px);
+
+  // @media #{$small-desktop} {
+  //   height: auto;
+  //   padding-bottom: 16px;
+  // }
+
+  @media #{$mobile} {
+    padding: 8px;
+   }
+}
+
+.dashboard-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  overflow: hidden;
+}
+
+.light-bg {
+  background: #e9ebee;
+}

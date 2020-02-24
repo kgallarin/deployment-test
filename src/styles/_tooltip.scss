@@ -1,0 +1,32 @@
+.tooltip {
+  font-size: $font-smallest !important;
+  outline: none;
+  &.no-arrow {
+    .arrow {
+      display: none !important;
+    }
+  }
+
+  &.dark-tooltip {
+    .tooltip-inner {
+      border-radius: 2px;
+      color: $dark-grey-blue;
+      text-align: left !important;
+      font-size: $font-xxsm;
+      max-width: 135px;
+      background-color: #fff;
+    }
+  }
+
+  &.black-tooltip {
+    .tooltip-inner {
+      border-radius: 2px;
+      color: #fff;
+      text-align: left !important;
+      font-size: $font-xxsm;
+      max-width: 235px;
+      padding:16px;
+      background-color: #000;
+    }
+  }
+}

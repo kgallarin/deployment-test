@@ -1,0 +1,122 @@
+.news-container-single {
+  font-family: $font-secondary;
+  font-size: $base;
+
+  .title {
+    font-weight: bold;
+    color: $battleship-grey;
+  }
+
+  .button-container {
+    width: 170px;
+    padding: 8px 0px;
+    margin: 0px 8px;
+    cursor: pointer;
+
+    @media #{$mobile} {
+      max-width: 43px;
+    }
+  }
+
+  //News singular
+  .news-single {
+    &-main {
+      padding: 16px 32px;
+      //max-height: calc(100vh - 328px);
+      //overflow: auto;
+      @include styled-scroll($white-40, #fff);
+
+      @media #{$mobile} {
+        padding: 0;
+      }
+    }
+
+    &-image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      object-position: 100% 0;
+      max-height: 206px;
+      padding: 14px 0px 0px 0px;
+
+      @media #{$mobile} {
+        border-radius: 8px 8px 0 0;
+        border: solid 1px $white-10;
+        border-width: 0px 1px 0px 0px;
+        padding: 0;
+        width: 100% !important;
+        height: 199px !important;
+      }
+    }
+
+    &-header {
+      font-weight: bold;
+
+      @media #{$mobile} {
+        padding: 24px 24px 0px;
+        margin: 0;
+      }
+    }
+
+    &-detail {
+      font-family: "Roboto" !important;
+      font-weight: 300;
+
+      margin: 0;
+      padding: 0;
+      white-space: pre-line;
+      margin-top: -20px;
+
+      @media #{$mobile} {
+        padding: 0px 24px;
+        margin-top: -30px;
+      }
+    }
+
+    &-footer {
+      display: flex;
+      opacity: 0.5;
+      padding-top: 16px;
+
+      p {
+        font-weight: normal;
+        line-height: 1.38;
+        letter-spacing: -0.54px;
+        color: #cdcdd0;
+      }
+
+      @media #{$mobile} {
+        padding: 24px;
+      }
+    }
+
+    &-navigation {
+      padding: 32px;
+      margin: 0;
+      border-top: 1px solid $white-10;
+
+      button {
+        width: 170px;
+      }
+
+      @media #{$mobile} {
+        padding: 16px;
+      }
+    }
+  }
+  svg[name='share']{
+    fill: $white;
+    opacity: 0.5;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+      font-weight: bold;
+      opacity: 1;
+    }
+  }
+}

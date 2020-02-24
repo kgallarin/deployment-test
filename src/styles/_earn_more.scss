@@ -1,0 +1,41 @@
+.offers-main {
+
+}
+
+
+.offers-list {
+
+}
+
+.offer {
+  .offer-el {
+    padding: 24px;
+    background-color: #030515;
+    border-radius: 8px;
+    font-family: $font-secondary;
+    margin-bottom: 8px;
+
+    .header {
+      margin-bottom: 0;
+      font-weight: 700;
+    }
+
+    .subs {
+      opacity: 0.6;
+      font-size: 15px;
+      margin: 16px 0;
+      max-width: 274px;
+    }
+
+    .benefit {
+      font-size: $font-xxxsm;
+    }
+
+    .custom-button {
+      max-width: 120px;
+      font-size: $font-xxxsm;
+      border-radius: 4px;
+    }
+  }
+
+}

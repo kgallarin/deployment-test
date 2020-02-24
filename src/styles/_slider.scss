@@ -1,0 +1,51 @@
+.slider-wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.swiper-slide {
+  width: 100% !important;
+}
+.pagination-custom {
+    position:static;
+    width:100%;
+   .swiper-pagination-bullet{
+      width: 12px;
+      height: 12px;
+      background-color: #ffffff;
+      opacity: 1;
+      cursor: pointer;
+      margin-right: 8px;
+
+      &-active {
+         background: $marigold;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+   }
+
+}
+
+.slide-comments {
+  .image {
+    width: 80px;
+    height: 80px;
+    border: solid 4px rgba(255, 255, 255, 0.3);
+  }
+
+  .name {
+    font-weight: 300;
+  }
+
+  .comment-wrapper {
+    .comment {
+      letter-spacing: -0.38px;
+      margin-bottom: 16px;
+    }
+    .gap {
+      height: 80px;
+    }
+  }
+  padding-bottom: 67px;
+}

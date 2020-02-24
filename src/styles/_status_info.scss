@@ -1,0 +1,33 @@
+.model-stat-info {
+  .tile-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $font-secondary;
+
+    min-height: 140px;
+    width: 100%;
+
+    &--front{
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      strong {
+        margin-left: 16px;
+        letter-spacing: -0.58px;
+        font-size: $font-xmd;
+        text-transform: uppercase;
+      }
+    }
+
+    .sub-text{
+      padding-left: 16px;
+      letter-spacing: -0.38px;
+    }
+  }
+
+  .ico-unrated {
+    fill: #FF4365;
+  }
+
+}

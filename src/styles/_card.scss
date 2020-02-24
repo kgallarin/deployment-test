@@ -1,0 +1,22 @@
+.card {
+  &-header {
+    display: flex;
+    justify-content: center;
+    padding: 16px 0;
+    margin-bottom: 16px;
+
+    .title {
+      font-size: $base;
+      font-weight: bold;
+    }
+
+    &.light-mode {
+      border-bottom: 1px solid $black-10;
+      border-radius: 8px 8px 0 0;
+    }
+    &.dark-mode {
+      border-bottom: 1px solid $white-10;
+      border-radius: 8px 8px 0 0;
+    }
+  }
+}

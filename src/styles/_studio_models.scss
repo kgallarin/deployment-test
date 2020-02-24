@@ -1,0 +1,241 @@
+.studio-models {
+  &-navigation {
+    padding: 0 14px;
+    width: 100%;
+
+    .custom-dropdown {
+      margin-right: 16px;
+      &:last-child {
+        margin-right: 0;
+      }
+      .dropdown-toggle {
+        min-width: 218px;
+        padding: 0 20px;
+        text-align: left;
+      }
+    }
+
+    // &-navigation
+    @media #{$tablet-portrait} {
+      flex-wrap: wrap;
+    }
+  }
+
+  .responsive-navigation {
+    .dropdown-toggle {
+      text-align: left;
+      // .custom-button
+      @media #{$mobile} {
+        padding: 0 20px;
+      }
+    }
+  }
+
+  .custom-button {
+    max-width: 177px;
+    margin-left: auto;
+    text-transform: uppercase;
+    font-size: $font-xxxsm;
+
+    // .custom-button
+    @media #{$mobile} {
+      max-width: 100%;
+    }
+  }
+
+  .main-content {
+    margin-top: 16px;
+    max-height: calc(100vh - 243px);
+    overflow: auto;
+    padding-right: 5px;
+    @include styled-scroll($white-40, #fff);
+
+    .tile {
+      margin-bottom: 16px;
+    }
+
+    .content {
+      padding: 16px 30px;
+      border-right: solid 1px $white-10;
+      min-width: 175px;
+    }
+
+    .main-profile {
+      &-details {
+        padding-left: 16px;
+        line-height: normal;
+        font-family: $font-secondary;
+
+        span {
+          text-transform: capitalize;
+        }
+      }
+
+
+      &-details {
+        padding-left: 16px;
+        line-height: normal;
+        font-family: $font-secondary;
+      }
+
+      &.inactive {
+        .main-profile-details {
+          opacity: 0.5;
+        }
+      }
+
+      .main-img {
+        max-width: 43px;
+      }
+    }
+
+
+    .status {
+      text-transform: uppercase;
+      min-width: 204px;
+      text-align: center;
+
+      p {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    .navigations {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      margin-right: 30px;
+      li {
+        margin-right: 16px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &.active {
+          a {
+            background: #8a48ff;
+            border: solid 1px #8a48ff;
+          }
+        }
+      }
+      a {
+        padding: 1px;
+        background: #161928;
+        display: block;
+        border-radius: 4px;
+        border: solid 1px $white-10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .main-view-container {
+      // .main-view-container
+      @media #{$mobile} {
+        flex-wrap: wrap;
+
+        .content {
+          width: 50%;
+        }
+
+        .status {
+          border-right: none;
+          min-width: initial;
+        }
+
+        .navigations {
+          margin: 0;
+          padding: 12px 0;
+          border-top: 1px solid $white-10;
+          width: 100%;
+          justify-content: center;
+        }
+      }
+    }
+
+    .tab-view {
+      border-top: solid 1px $white-10;
+      padding: 25px 22px 17px;
+
+      // .tab-view
+      @media #{$mobile} {
+        padding: 16px;
+      }
+    }
+  }
+
+  .tab-content {
+    font-family: $font-secondary;
+    .default-col{
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+
+    .header-text {
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .tile-inner {
+      min-height: 172px;
+      text-align: center;
+      width: 100%;
+      letter-spacing: -0.58px;
+      padding: 0 8px;
+
+      &--front {
+        margin: 20px 0;
+        font-size: $font-xmd;
+        &.w--icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          strong {
+            margin-right: 16px;
+          }
+        }
+      }
+    }
+
+    .svg-icon {
+      fill: #fff;
+    }
+
+    .details-link {
+      color: $marigold;
+      font-family: $font-secondary;
+      font-size: $font-xsm;
+      font-weight: 700;
+    }
+
+    .sub-text {
+      letter-spacing: -0.38px;
+      font-weight: 700;
+      text-transform: capitalize;
+    }
+
+    strong {
+      &.small {
+        font-size: 16px;
+        letter-spacing: -0.38px;
+        line-height: normal;
+      }
+    }
+  }
+
+  .model-card {
+    min-height: 75px;
+  }
+
+  .report-col {
+    // .report-col
+    @media #{$tablet-portrait} {
+      width: 50%;
+      flex: 0 0 50%;
+    }
+  }
+}

@@ -1,0 +1,194 @@
+.private-show {
+  display: flex;
+  flex-direction: column;
+  font-family: $font-secondary;
+  font-size: $base;
+  justify-content: flex-start;
+  overflow-y: auto;
+  @include styled-scroll($white-40, #fff);
+
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+
+  .wrapper {
+    display: flex;
+    font-family: $font-secondary;
+    font-size: $base;
+    line-height: 2;
+  }
+
+  .font-setting {
+    svg {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .chatbox-container {
+    overflow-y: auto;
+    flex: 2 0;
+    margin-right: 16px;
+    min-height: calc(100% - 89px);
+    height: 100%;
+    position: relative;
+
+    .conversation-main-container {
+      margin-top: 32px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      @include styled-scroll($white-40, #fff);
+      justify-content: flex-end;
+    }
+
+    .message-conversation {
+      overflow-y: auto;
+      padding-right: 3px;
+      @include styled-scroll($dark-two, $dark-two);
+  
+      &:hover {
+        @include styled-scroll($dark-two, #323646);
+      }
+    }
+    
+  }
+
+  .member-info-container {
+    font-family: $font-secondary;
+    display: flex;
+    flex-direction: column;
+    flex: 2 0;
+    word-break: break-all;
+
+    max-height: 250px;
+    .header {
+      padding: 16px;
+     
+      &.light-mode {
+        border-bottom: 1px solid $black-10;
+        border-radius: 8px 8px 0 0;
+      }
+      &.dark-mode {
+        border-bottom: 1px solid $white-10;
+        border-radius: 8px 8px 0 0;
+      }
+    }
+
+    .name {
+      font-size: $base;
+      font-weight: bold;
+      letter-spacing: normal;
+    }
+
+
+    .editable-note {
+
+      .bold {
+        font-size: $base;
+        margin: 8px 0;
+      }
+
+      textarea {
+        overflow: auto;
+        max-height: 140px;
+      }
+
+      .note-container {
+        max-height: 144px;
+        @include styled-scroll($white-40, #fff);
+      }
+    }
+  }
+
+  .chatbox {
+    flex: 2 0;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    
+    .message-conversation {
+      p.name {
+        color: $battleship-grey;
+      }
+    }
+  }
+
+  .section1 {
+    display: flex;
+    margin-bottom: 16px;
+  }
+
+  .section2 {
+    display: flex;
+    position: relative;
+    height: calc(100vh - 240px);
+    min-height: calc(100vh - 240px);
+    
+    .container-left {
+      display: flex;
+      flex-direction: row;
+      
+      @media #{$small-desktop} {
+       display: flex;
+       flex-direction: column;
+     }
+   }
+
+    .video-and-audio {
+      margin-right: 16px;
+      justify-content: center;
+      flex: 4 0;
+    }
+
+    .microphone {
+      padding: 0 8px;
+      justify-content: center;
+      flex: 1 0;
+    }
+
+    .stat-container{
+      flex: 4 0;
+    }
+  }
+
+  .flex-3-0 {
+    flex: 3 0;
+  }
+
+  .flex-2-0 {
+    flex: 2 0;
+  }
+
+  .flex-1-0 {
+    flex: 1 0;
+  }
+
+  .btn-endshow {
+    margin-top: 16px;
+    font-size: $font-xxxsm;
+    font-weight: bold;
+    width: 100%;
+    text-transform: uppercase;
+  }
+
+  .light-mode {
+    color: $dark-grey-blue;
+
+    .message-conversation {
+      overflow-y: auto;
+      padding-right: 3px;
+      @include styled-scroll(#fff, #fff);
+
+      &:hover {
+        @include styled-scroll($charcoal-grey-40, $dark-grey-blue);
+      }
+    }
+  }
+}

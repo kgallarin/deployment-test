@@ -1,0 +1,38 @@
+.username {
+  font-weight: 700;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+  margin-bottom:9px;
+  margin-bottom: 0;
+
+  &:after {
+    content: " ";
+    border: 2px solid #343c4b;
+    border-radius: 100%;
+    height:13px;
+    width:13px;
+    background: #262e3e;
+    display: inline-block;
+    margin-left: 8px;
+  }
+
+  &.active {
+    &:after {
+      background: #5cd068 !important;
+    }
+  }
+
+  &.inactive-light {
+    &:after {
+      background: $very-light-blue !important;
+    }
+  }
+
+  &.inactive-dark {
+    &:after {
+      background: #262e3e !important;
+    }
+  }
+}

@@ -1,0 +1,96 @@
+.custom-steps-container {
+  background: $dark-two;
+  border-radius: 4px;
+  overflow: hidden;
+  padding-bottom: 24px;
+}
+
+.custom-steps-button { min-width: 177px; }
+.steps-tab-content {
+  display: flex;
+  .tab-pane {
+    .main-form {
+      display: block;
+      animation: fadeIn 0.5s;
+      width: 100%;
+    }
+  }
+}
+
+.steps--header {
+  padding: 24px;
+  align-items: center;
+  border-bottom: 1px solid $white-10;
+  background: $dark-two;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+
+  .title {
+    font-size: $font-md;
+    margin:0;
+    strong {
+      font-weight: 500;
+    }
+  }
+  .close {
+    fill: #fff;
+    opacity: 1;
+  }
+}
+
+.steps-nav-container {
+  padding: 0 24px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// keyframe animation
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}

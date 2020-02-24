@@ -1,0 +1,195 @@
+.payout {
+  .tile {
+
+    &.mb-3 { margin-bottom: 0 !important;}
+    &-inner {
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  .headers {
+    font-family: $font-secondary;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+
+  .block {
+    margin-bottom: 18px;
+    .block-ttl {
+      color: #fff;
+      font-weight: 700;
+      margin-bottom: 12px;
+      opacity: 0.6;
+    }
+  }
+  .custom-button {
+    min-width: 150px;
+  }
+}
+
+// Request Payout
+
+.request-payout {
+  max-width: 504px;
+  min-width: 504px;
+
+  .button-container {
+    display: flex;
+    padding-top: 24px;
+    button {
+      font-size: 13px;
+      max-width: 150px;
+      height: 43px;
+    }
+  }
+
+  // request-payout
+  @media #{$small-desktop} {
+    max-width: 100%;
+    min-width: 100%;
+   }
+}
+
+.general-settings {
+  max-width: 272px;
+  min-width: 272px;
+
+  // general-settings
+  @media #{$small-desktop} {
+    max-width: 50%;
+    min-width: 50%;
+    margin-top: 16px;
+   }
+
+   @media #{$mobile} {
+     max-width: 100%;
+     min-width: 100%;
+     margin-top: 8px;
+    }
+}
+
+// BillingAddress
+
+.billing-address,
+.general-settings {
+  .block-ttl {
+    font-size: 13px;
+    margin: 10px 0;
+    opacity: 0.5;
+  }
+}
+
+.billing-address {
+  // billing-address
+  @media #{$small-desktop} {
+    margin-top: 16px;
+   }
+ @media #{$mobile} {
+   max-width: 100%;
+   min-width: 100%;
+   margin-top: 8px;
+  }
+}
+// GeneralSettings
+
+.general-settings {
+  .svg-icon {
+    opacity: 0.5;
+  }
+}
+
+// PayoutHistory
+
+// .payout-history {
+//   margin-top: 16px;
+//   .tile-inner{
+//     min-height: calc(100vh - 506px);
+//   }
+//   .headers {
+//     margin-bottom: 0;
+//     padding: 32px;
+//   }
+//
+//   .pagination-container{
+//     margin-top: auto;
+//     border-top: 1px solid $white-10;
+//     padding: 24px 0;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//
+//     .pagination {
+//       top: 5px;
+//       position: relative;
+//     }
+//
+//     .page-item {
+//       &.active {
+//         .page-link {
+//           background: $warm-pink;
+//           width: 60px;
+//           height: 60px;
+//           border-radius: 4px;
+//           top:-5px;
+//           font-weight: 700;
+//           z-index: 105;
+//         }
+//       }
+//     }
+//     .page-link {
+//       border: 1px solid $white-10;
+//       min-height: 48px;
+//       min-width: 48px;
+//       justify-content: center;
+//       align-items: center;
+//       display: flex;
+//       color: #fff;
+//       background-color: $dark-grey-blue;
+//
+//       outline: none;
+//
+//       &:focus {
+//         box-shadow: none;
+//       }
+//     }
+//   }
+//   // make the pagination pushed to bottom
+//
+//   .table-container {
+//     display: flex;
+//     flex-direction: column;
+//     height: calc(100% - 86px);
+//     th{
+//       &:nth-child(2) {
+//         padding-left: 32px;
+//         @media #{$mobile} {
+//           padding-left: 16px;
+//          }
+//       }
+//     }
+//     tr{
+//       td {
+//         width: 20%;
+//         &:nth-child(2) {
+//           padding-left: 32px;
+//           @media #{$mobile} {
+//             padding-left: 20px;
+//           }
+//         }
+//
+//         @media #{$mobile} {
+//           &:nth-child(2) {
+//             width: 30% !important;
+//           }
+//          }
+//       }
+//     }
+//
+//   }
+//   @media #{$mobile} {
+//     margin-top: 8px;
+//    }
+// }

@@ -1,0 +1,21 @@
+.conversation-panel {
+  background-color: #f0f0f0;
+  border-right: solid 1px #979797;
+  border-left: solid 1px #979797;
+  height: 100%;
+
+  .message-conversation {
+    height: 100%;
+    padding: 24px 27px 24px 32px;
+    margin: 5px 5px 5px 0;
+    overflow-y: auto;
+
+    // scrollbar on mouse enter
+    @include hiding-scrollbar-dark;
+  }
+
+  // conversation-panel
+  @media #{$beyond-md-desktop} {
+    border: 0;
+  }
+}

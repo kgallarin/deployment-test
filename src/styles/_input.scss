@@ -1,0 +1,27 @@
+.custom-input {
+  background: $pale-grey;
+  padding: 0 15px;
+  height: 40px;
+  //color: #fff;
+
+  font-size: $font-xxsm;
+  letter-spacing: -0.48px;
+  // color: $dark-grey-blue;
+
+  // mixins
+  @include font-settings;
+  @include styled-placeholder($dark-grey-blue,'');
+
+  // &:focus, &:active {
+  //   color: #fff;
+  // }
+
+  &.dark {
+    background: #05091f;
+    border : 1px solid #05091f;
+  }
+
+  &.lg {
+    height: 43px;
+  }
+}

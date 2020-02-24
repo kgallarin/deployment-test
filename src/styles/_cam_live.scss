@@ -1,0 +1,73 @@
+.camlive {
+  font-family: $font-secondary;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 326px;
+  min-height: 326px;
+  background-color: #1b2031;
+  border-radius: 8px;
+  padding: 16px !important;
+
+  &-cam2cam {
+    position: relative;
+    height: 100%;
+    margin-bottom: 16px;
+  }
+
+  &-groupchat {
+    position: relative;
+    height: fit-content;
+  }
+
+  &-liveshow {
+    position: relative;
+    height: fit-content;
+  }
+
+  &-privateshow {
+    min-height: 48vh;
+
+    @media #{$small-desktop } {
+      min-height: 30vh;
+    }
+  }
+
+  .mobile-guide {
+    position: absolute;
+    border: 1px dotted;
+    width: 30%;
+    align-self: center;
+    height: calc(100% - 32px);
+  }
+
+  .mobile-view-lable {
+    position: absolute;
+    font-family: $font-secondary;
+    color: #fff;
+    bottom: 0;
+    margin-bottom: 32px;
+    font-size: 14px;
+    background-color: $dark;
+    padding: 4px 16px;
+    border-radius: 11px;
+  }
+  .light-guide {
+    border: 1px dotted $dark-grey-blue;
+  }
+
+  video {
+    width: 100%;
+    height: 100%;
+    background-color: #161928;
+   
+    //mirror the video
+    transform: rotateY(180deg);
+    -webkit-transform:rotateY(180deg); /* Safari and Chrome */
+    -moz-transform:rotateY(180deg); /* Firefox */
+  }
+
+  .video-light-mode {
+    background-color: #fff;
+  }
+}

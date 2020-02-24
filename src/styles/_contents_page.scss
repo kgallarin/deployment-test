@@ -1,0 +1,61 @@
+.contents {
+  display: flex;
+  flex-direction: row;
+  padding: 24px;
+  @include styled-scroll($white-40, #fff);
+  
+  @media #{$mobile} {
+    flex-direction: column;
+    padding: 8px !important;
+  }
+
+  &-full-height {
+    min-height: -webkit-fill-available;
+  }
+
+  .vdo-main-container {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 1280px) {
+      flex-direction: column;
+  
+      .vdo-container-wrapper {
+        width: 100%;
+        flex: 0 0 100%;
+      }
+  
+      .caption-container {
+        width: 100%;
+        flex: 0 0 100%;
+        padding: 24px 0;
+        //padding: 0 24px;
+        textarea {
+          resize: none;
+          background-color: #323646;
+          border-color: #323646;
+          color: $white;
+          padding: 4px 0px;
+          padding-bottom: 16px;
+          border-radius: 8px;
+          font-family: $font-secondary;
+        }
+      
+        textarea.form-control {
+          resize: none;
+          background-color: #323646;
+          border-color: #323646;
+          color: $white;
+          padding-bottom: 16px;
+          border-radius: 4px;
+          margin: 0px -1px;
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}
+
+.content-viewall {
+  //nothing here..
+}

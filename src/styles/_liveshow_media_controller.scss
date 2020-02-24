@@ -1,0 +1,43 @@
+.liveshow-media-controller {
+  display: flex;
+  flex-direction: row;
+  padding: 24px 16px;
+  justify-content: space-between;
+  border-radius: 8px;
+  width: 100%;
+
+  .info {
+    display: flex;
+    align-items: center;
+
+    .label-container {
+      padding: 0 16px 0 0;
+      display: flex;
+      margin-bottom: 0px;
+
+      label.stat {
+        font-family: $font-secondary;
+        font-size: $base;
+        align-self: center;
+        margin-bottom: 0;
+        padding-left: 8px;
+      }
+    }
+  }
+
+  button {
+    text-transform: uppercase;
+    font-family: $font-secondary;
+    font-size: $font-xxxsm;
+    font-weight: bold;
+    width: fit-content;
+    width: -moz-fit-content; //firefox
+    align-self: center;
+  }
+  .btn:focus,
+  .btn:active:focus,
+  .btn.active:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}

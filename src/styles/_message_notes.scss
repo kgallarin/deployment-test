@@ -1,0 +1,27 @@
+.messaging-notes {
+    &-header {
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 20px;
+        max-height: 75px;
+        border-bottom: 1px solid #d7d7d7;
+        .icon-container {
+
+        }
+        .room-king {
+            margin:0;
+            font-family: $font-secondary;
+            font-size: 16px;
+            font-weight: 700;
+            @include font-settings;
+            color: #343c4b;
+        }
+        .menu {
+            @include menu-dots(#696969);
+        }
+    }
+
+    .link-square-icon {
+      @include link-squared;
+    }
+}

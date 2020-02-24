@@ -1,0 +1,163 @@
+.member-info-container {
+  font-family: $font-secondary;
+
+  &.flip {
+    -webkit-transform: scaleY(-1);
+    -moz-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    transform: scaleY(-1);
+  }
+
+  &.light-mode {
+    color: $dark-grey-blue;
+  }
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .wrapper {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      width: fit-content;
+      width: -moz-fit-content; //firefox
+
+      &:hover {
+        cursor: pointer;
+      }
+      .member-name {
+        margin: 0 8px;
+        font-size: $base;
+        font-weight: bold;
+        font-family: $font-secondary;
+      }
+    }
+  }
+
+  .content {
+    margin-top: 24px;
+
+    .note {
+      @include styled-scroll($white-40, #fff);
+      overflow-y: auto;
+    }
+
+    .separator {
+      border-top: 1px solid #d7d7d7;
+    }
+
+    &.light.editable-note-container {
+      .note-container {
+        color: $dark-grey-blue;
+      }
+    }
+  }
+
+  .editable-note-container {
+    width: 100%;
+    font-size: $base;
+
+    .label {
+      background: $dark-two;
+      color: #fff;
+    }
+
+    .editable-note {
+      padding: 0px;
+      margin: 0px;
+    }
+
+    .main-note-container {
+      .note-container {
+        font-size: $font-xxsm;
+        color: #fff;
+        line-height: 1.43rem;
+        padding-top: 16px;
+        word-wrap: break-word;
+        word-break: break-all;
+        overflow-y: hidden;
+        max-height: 206px;
+        
+        &:hover {
+          overflow-y: auto;
+          @include styled-scroll($white-40, #fff);
+          background-color: $dark-three;
+        }
+      }
+
+      textarea {
+        width: 100%;
+        box-sizing: border-box;
+        resize: none;
+        border: none;
+        border-radius: 4px;
+        font-size: $font-xxsm;
+        line-height: 1.43rem;
+        max-height: 206px;
+        overflow-y: auto;
+        white-space: pre-line;
+        word-break: break-all;
+        word-wrap: normal;
+
+        @include styled-scroll($white-40, #fff);
+        background-color: $dark-two;
+        color: #fff;
+        margin-top: 6px;
+        padding: 0;
+
+        &:hover {
+          background-color: $dark-three;
+        }
+      }
+    }
+
+    .note-container:first-line {
+      line-height: 0px;
+      white-space: pre-line;
+    }
+
+    .normal-desktop {
+      @media #{$small-desktop} {
+        display: none;
+      }
+    }
+
+    .small-desktop {
+      display: none;
+      @media #{$small-desktop} {
+        display: block;
+      }
+    }
+
+    .separator {
+      border-top: 0.5px solid #d7d7d7;
+    }
+  }
+
+  &.light-mode {
+    .editable-note-container {
+      .label {
+        background: #fff;
+        color: $dark-grey-blue;
+      }
+
+      .note-container {
+        color: $dark-grey-blue;
+
+        &:hover {
+          background-color: $very-light-blue;
+        }
+      }
+
+      textarea {
+        background-color: #fff;
+        color: $dark-grey-blue;
+
+        &:hover {
+          background-color: $very-light-blue;
+        }
+      }
+    }
+  }
+}

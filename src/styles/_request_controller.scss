@@ -1,0 +1,49 @@
+.request-controller {
+  padding: 16px;
+  width: 100%;
+  font-family: $font-secondary;
+  border-radius: 8px;
+  max-height: 176px;
+  overflow-y: auto;
+  @include styled-scroll($white-40, #fff);
+
+  .light-mode {
+    color: $dark-grey-blue;
+  }
+
+  .info {
+    display: flex;
+    justify-content: space-between;
+    margin: 6px 0;
+
+    label {
+      align-self: center;
+      width: 100%;
+      flex: 4 0;
+
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .button-wrapper {
+    display: flex;
+    width: 100%;
+    flex: 3 0;
+
+    button {
+      margin: 0 4px;
+      font-family: $font-secondary;
+      font-size: $font-xxxsm;
+      font-weight: bold;
+    }
+  }
+
+  .btn:focus,
+  .btn:active:focus,
+  .btn.active:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}

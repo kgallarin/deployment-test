@@ -1,0 +1,60 @@
+.contacts-bar-contact {
+  font-family: $font-secondary;
+  padding: 24px 30px;
+  cursor: pointer;
+
+  p {
+    margin: 0;
+  }
+  .options {
+    @include menu-dots(#8190b0);
+  }
+
+  .last-message {
+    color: rgba(255, 255, 255, 0.5);
+    max-width: 235px;
+    max-height: 18px;
+    @include text-ellipsis;
+  }
+  .timestamp {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  // contacts-bar-contact
+  &:hover,
+  &:active {
+    background-color: #3a465b;
+  }
+}
+
+.contact-list-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 6px 16px;
+  font-size: 14px;
+
+  &:hover {
+    background-color: $white-10;
+    cursor: pointer;
+  }
+
+  p {
+    font-family: $font-secondary;
+    font-size: $font-xxsm;
+    font-weight: normal;
+  }
+}
+
+.light-hover {
+  &:hover {
+    background-color: $black-10;
+  }
+}
+
+.chatbox {
+  display: flex;
+  &:hover {
+    cursor: pointer;
+  }
+}

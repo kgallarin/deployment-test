@@ -1,0 +1,302 @@
+.liveshow {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+
+  .section1 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-right: 8px;
+    margin-bottom: 16px;
+
+    .left {
+      flex: 1 0;
+      margin-right: 16px;
+    }
+
+    .right {
+      flex: 2 0;
+    }
+  }
+
+  .section2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 0;
+    height: 100%;
+    
+    .liveshow-message-container {
+      height: 100%;
+      overflow-y: auto;
+      flex: 3 0;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      flex: 2 0;
+    }
+  }
+
+  &-custom-container {
+    height: 72px;
+    align-items: center;
+  
+    svg {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  
+    &.light-mode {
+      background-color: #fff !important;
+      border: solid 1px $black-10;
+     
+      .info {
+        color: $dark-grey-blue;
+      }
+  
+      .control {
+        color: $dark-grey-blue;
+  
+        p.switch-label{
+          color: $dark-grey-blue;
+        }
+      }
+    }
+  }
+}
+
+.liveshow-message {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow-y: hidden;
+
+  p {
+    @include font-settings;
+    font-weight: normal;
+    letter-spacing: normal;
+  }
+
+  .light-mode {
+    p {
+      color: $dark-grey-blue;
+      font-weight: normal;
+    }
+
+    .username:after {
+      background: $very-light-blue;
+    }
+
+    .message-conversation {
+      overflow-y: auto;
+      padding-right: 3px;
+      //added this line for fixed glitch when mousehover
+      @include styled-scroll(#fff, #fff);
+
+      &:hover {
+        @include styled-scroll($charcoal-grey-40, $dark-grey-blue);
+      }
+    }
+  }
+
+  .dark-mode {
+
+    p.name {
+      color: $battleship-grey;
+    }
+    
+    .username:after {
+      background: $white-40;
+    }
+  }
+
+  .conversation {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 3 0;
+    padding: 16px;
+
+    .font-setting {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 16px;
+      position: absolute;
+      right: 0;
+      margin-right: 24px;
+
+      svg {
+        padding-right: 4px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .conversation-main-container {
+      margin-top: 32px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      @include styled-scroll($white-40, #fff);
+      justify-content: flex-end;
+    }
+
+    .message-composer {
+      font-family: $font-secondary;
+    }
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+
+  .message-conversation {
+    overflow-y: auto;
+    padding-right: 3px;
+    //added this line for fixed glitch when mousehover
+    @include styled-scroll($dark-two, $dark-two);
+
+    &:hover {
+      @include styled-scroll($dark-two, #323646);
+    }
+  }
+}
+
+.dark-border {
+
+  &-right{
+    border-right: 1px solid $white-10;
+  }
+
+  &-bottom {
+    border-bottom: 1px solid $white-10;
+  }
+}
+
+.light-border {
+  &-right{
+    border-right: 1px solid $black-10;
+  }
+
+  &-bottom {
+    border-bottom: 1px solid $black-10;
+  }
+}
+
+.liveshow-contacts {
+  flex: 2 0;
+  .contacts-bar-list {
+    padding: 0px;
+    margin: 0;
+    width: 100%;
+
+    .contacts-bar-contact {
+      padding: 16px;
+
+      p {
+        font-size: $base;
+        
+      }
+
+      p.username {
+        font-weight: bold;
+      }
+    }
+
+    .light-hover { 
+      &:hover, &:active {
+        background-color: $black-10;
+      }
+    }
+  }
+
+  .btn {
+    font-family: $font-secondary;
+    font-size: $font-xxsm;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 12px;
+    width: 100%;
+  }
+
+  .btn:focus,
+  .btn:active:focus,
+  .btn.active:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  .header {
+    padding: 16px;
+
+    .active {
+      background-color: $warm-pink !important;
+      border: none;
+    }
+
+    .inactive {
+      background-color: #161928;
+      border: none;
+    }
+
+    .light-bg {
+      color: $dark-grey-blue;
+    }
+
+    .nav-bnt {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .light-bg {
+      background-color: $very-light-blue;
+    }
+
+    .chat-active {
+      background-color: $warm-pink;
+      width: 4px;
+      height: 4px;
+      margin-left: 4px;
+    }
+  }
+
+  .main {
+    margin-bottom: 16px;
+    max-height: calc(100% - 106px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+   
+    font-size: $font-xxsm;
+    position: relative;
+    @include styled-scroll($dark-two, $dark-two);
+
+    &:hover {
+      
+      @include styled-scroll($dark-two, #323646);
+    }
+    .contacts-bar-list {
+      position: absolute;
+    }    
+  }
+
+  &.light-mode {
+    .main {
+      @include styled-scroll(#fff, #fff);
+      &:hover {
+        overflow-y: auto;
+        @include styled-scroll($charcoal-grey-40, $dark-grey-blue);
+      }
+    }
+  }
+}

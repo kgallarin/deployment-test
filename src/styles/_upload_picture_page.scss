@@ -1,0 +1,168 @@
+.upload-picture {
+
+  
+  @media #{$mobile, $mobile-small} {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section1 {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 20%;
+    margin: 24px 32px;
+
+    @media #{$tablet-portrait} {
+      flex: 0 0 30%;
+      
+    }
+
+    @media #{$mobile} {
+      margin: 8px 0px;
+    }
+
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+
+      //show or hide button;
+      #bt_back {
+        display: none;
+      }
+
+      @media #{$mobile-small, $mobile} {
+        #bt_back{
+          display: block;
+        }
+      }
+    }
+
+    @media #{$mobile-small, $tablet-portrait} {
+      width: 100%;
+      margin: 0px;
+      padding: 24px 24px 0px 24px;
+      position: relative;
+    }
+
+    button {
+      width: 50%;
+      align-self: flex-end;
+      font-family: $font-secondary;
+      font-weight: bold;
+      margin-top: 16px;
+
+      @media #{$tablet-portrait} {
+        width: 100%;
+      }
+
+      @media #{$mobile-small, $mobile} {
+        display: none;
+      }
+    }
+  }
+
+  .section2 {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    border-left: solid 1px #495367;
+    padding: 16px;
+    width: 100%;
+
+    .main{
+      align-self: center;
+      width: 100%;
+
+      @media #{$mobile, $mobile-small} {
+       margin: 0;
+      }  
+    }
+
+    @media #{$mobile, $mobile-small} {
+      width: 100%;
+      margin: 0px;
+      padding: 16px 24px;
+      border-left: none;
+
+      .main{
+        align-self: center;
+        width: 100%;
+       
+        .upload-multi-pics {
+           width: 100%;
+        }
+      }
+
+      #bt_back {
+        display: none;
+      }
+    }    
+  }
+
+  .title {
+    text-transform: uppercase;
+    font-size: $base;
+    font-family: $font-secondary;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+  }
+
+  ::placeholder {
+    color: #81828a;
+  }
+
+  .custom-input {
+    font-family: $font-secondary;
+    font-weight: normal;
+    font-size: $base;
+    border: none;
+    color: #374163;
+    z-index: 1;
+  }
+
+  .custom-input:focus {
+    color: #374163;
+  }
+
+  textarea {
+    font-family: $font-secondary;
+    font-weight: normal;
+    font-size: $base;
+    margin-top: 16px;
+    color: #374163;
+    border: none;
+    outline: none;
+    resize: none;
+  }
+
+  span {
+    .error {
+      font-family: $font-secondary;
+      font-size: $font-xxsm;
+      color: #cdcdd0;
+
+      &-red {
+        color: red;
+      }
+    }
+  }
+
+  .custom-button:disabled {
+    cursor: default;
+    background: none;
+    background-image: linear-gradient(103deg, #ff8d5c, #fe2493);
+    color: $white;
+  }
+
+  .button-container {
+    display: none;
+    font-family: $font-secondary;
+    
+    @media #{$mobile-small, $mobile} {
+      padding-top: 8px;
+      display: block;
+    }
+  }
+}
